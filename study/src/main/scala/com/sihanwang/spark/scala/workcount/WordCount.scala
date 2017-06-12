@@ -1,13 +1,19 @@
-package com.sihanwang.spark.scala.study
+package com.sihanwang.spark.scala.workcount
 
 import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
 
+//http://nishutayaltech.blogspot.com/2015/04/how-to-run-apache-spark-on-windows7-in.html
+//https://jaceklaskowski.gitbooks.io/mastering-apache-spark/content/spark-tips-and-tricks-running-spark-windows.html
+
+
 //export HBASE_HOME=/hadoop/cloudera/parcels/CDH-5.5.2-1.cdh5.5.2.p1699.1674/
+
+
 //export SPARK_DIST_CLASSPATH="$SPARK_DIST_CLASSPATH:$($HBASE_HOME/bin/hbase classpath)"
 
-//spark-submit --class com.sihanwang.spark.scala.study.WordCount --master yarn-cluster --deploy-mode cluster --queue commoditiesdata study-0.0.1-SNAPSHOT.jar "jing.wang/README.md" "jing.wang/result.txt"
-//spark-submit --principal bigdata-app-commoditiesdata-pcadmin@INTQA.THOMSONREUTERS.COM --keytab bigdata-app-commoditiesdata-pcadmin.keytab --class com.tr.cdb.distribution.series.sdi.job.CDBSeries_SDI_Producer --master yarn-cluster --deploy-mode cluster --queue commoditiesdata CDBSeries_SDI-0.0.1-SNAPSHOT.jar F 00000000000000 20170101000000 /config/hbase-site-titan.xml /config/core-site.xml 
+//spark-submit --class com.sihanwang.spark.scala.study.WordCount --master yarn-cluster --deploy-mode cluster study-0.0.1-SNAPSHOT-jar-with-dependencies.jar "testdata/vtlocation.log" "testdata/result.txt"
+//spark-submit.cmd --class com.sihanwang.spark.scala.study.WordCount --master local[*]  C:\github\sparkwithscala\study\target\study-0.0.1-SNAPSHOT-jar-with-dependencies.jar file:///c:\\test\\vtlocation.log file:///c:\\test\\result.txt
 
 object WordCount extends App {
   def ReceivedParameters = args.mkString("<", ",", ">")
