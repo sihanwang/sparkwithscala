@@ -1,4 +1,4 @@
-package com.sihanwang.spark.scala.workcount.translateapp.streaming
+package com.sihanwang.spark.scala.translateapp.streaming
 
 
 import scala.io.Source

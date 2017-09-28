@@ -1,4 +1,4 @@
-package com.sihanwang.spark.scala.workcount.translateapp
+package com.sihanwang.spark.scala.translateapp
 
 import scala.io.Source
 import org.apache.spark.SparkConf
